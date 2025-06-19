@@ -1,6 +1,7 @@
 # Model Regresi Machine Learning
 Tugas Akhir Machine Learning
-** ⁠6182201017 - TIFFANY TASYA AGATHA **
+
+**6182201017 - TIFFANY TASYA AGATHA**
 
 ## Penggunaan  
 Clone proyek TugasAkhirML 
@@ -8,6 +9,15 @@ Clone proyek TugasAkhirML
 git clone https://github.com/tiffany78/TugasAkhirML
 ```
 Pindah ke dalam direktori proyek TugasAkhirML
+```
+cd TugasAkhirML
+```
+
+## Setup Environment
+Untuk menggunakan model, pastikan library XGBoost
+```
+pip install xgboost
+```
 
 ## Proses Running Aplikasi
 Setelah proses clone berhasil, Anda bisa menjalankan aplikasi di dalam direktori proyek, buka terminal dan jalankan perintah berikut:
