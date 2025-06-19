@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>House Price Prediction</title>
+</head>
+<body>
+    <h2>Form Prediksi Harga Rumah</h2>
+    <form action="/predict" method="POST">
+
+         <style>
+            .radio-inline {
+                display: inline-block;
+                margin-right: 15px;
+                margin-bottom: 10px;
+            }
+        </style>
+
+        <label><strong>Neighborhood:</strong></label><br>
+        <div>
+            {% for n in ['Names', 'CollgCr', 'OldTown', 'Edwards', 'Somerst', 'Gilbert', 'NridgHt', 'Sawyer',
+                        'NWAmes', 'SawyerW', 'BrkSide', 'Crawfor', 'Mitchel', 'NoRidge', 'Timber', 'IDOTRR',
+                        'ClearCr', 'SWISU', 'StoneBr', 'Blmngtn', 'MeadowV', 'BrDale', 'Veenker', 'NPkVill', 'Blueste'] %}
+                <label class="radio-inline">
+                    <input type="radio" name="Neighborhood" value="{{n}}" required> {{n}}
+                </label>
+            {% endfor %}
+        </div>
+
+        <label for="ExterQual"><strong>ExterQual:</strong></label>
+        <select name="ExterQual" required>
+            <option value="None">None</option>
+            <option value="Po">Poor</option>
+            <option value="Fa">Fair</option>
+            <option value="TA">Average</option>
+            <option value="Gd">Good</option>
+            <option value="Ex">Excellent</option>
+        </select><br><br>
+
+        <label for="KitchenQual"><strong>KitchenQual:</strong></label>
+        <select name="KitchenQual" required>
+            <option value="None">None</option>
+            <option value="Po">Poor</option>
+            <option value="Fa">Fair</option>
+            <option value="TA">Average</option>
+            <option value="Gd">Good</option>
+            <option value="Ex">Excellent</option>
+        </select><br><br>
+
+        <label for="BsmtQual"><strong>BsmtQual:</strong></label>
+        <select name="BsmtQual" required>
+            <option value="None">None</option>
+            <option value="Po">Poor</option>
+            <option value="Fa">Fair</option>
+            <option value="TA">Average</option>
+            <option value="Gd">Good</option>
+            <option value="Ex">Excellent</option>
+        </select><br><br>
+
+        <label for="GarageFinish"><strong>Garage Finish:</strong></label>
+        <select name="GarageFinish" required>
+            <option value="None">No Garage</option>
+            <option value="Unf">Unfinised</option>
+            <option value="RFn">Rough Finished</option>
+            <option value="Fin">Finished</option>
+        </select><br><br>
+
+        <label for="OverallQual"><strong>Overall Quality:</strong></label>
+        <input type="number" name="OverallQual" min="1" max="10" required><br><br>
+
+        <label for="GrLivArea"><strong>Above Ground Living Area (sq ft):</strong></label>
+        <input type="number" name="GrLivArea" min="334" max="5642" required><br><br>
+
+        <label for="GarageCars"><strong>Garage Capacity (cars):</strong></label>
+        <input type="number" name="GarageCars" min="0" max="4" required><br><br>
+
+        <label for="YearBuilt"><strong>Year Built:</strong></label>
+        <input type="number" name="YearBuilt" min="1872" max="2011" required><br><br>
+
+        <label for="GarageArea"><strong>Garage Area (sq ft):</strong></label>
+        <input type="number" name="GarageArea" min="0" max="1418" required><br><br>
+
+        <label for="FullBath"><strong>Full Bathrooms:</strong></label>
+        <input type="number" name="FullBath" min="0" max="4" required><br><br>
+
+        <label for="TotalBsmtSF"><strong>Total Basement Area (sq ft):</strong></label>
+        <input type="number" name="TotalBsmtSF" min="0" max="6111" required><br><br>
+
+        <button type="submit">Prediksi Harga</button>
+    </form>
+</body>
+</html>
